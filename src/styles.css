@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+div {
+  outline: 1px solid teal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px;
+}
+
+img {
+  display: block;
+  height: 400px;
+}
+
+.title,
+.search-form {
+  margin: 15px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-auto-rows: 400px; */
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
