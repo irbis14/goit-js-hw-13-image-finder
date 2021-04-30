@@ -4,20 +4,28 @@ const KEY = '21304546-dfd139bdae93d70ad7d2573af';
 export default class PicturesApi {
   constructor() {
     this.searchQuery = '';
-    // this.page = page;
+    this.page = 1;
   }
-  // `${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${KEY}`,
 
-  async fetchCountry() {
+  async fetchImage() {
     const response = await fetch(
-      `${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=&per_page=12&key=${KEY}`,
+      `${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${KEY}`,
     );
-    const picture = response.then(response => {
-      if (!response.ok) {
-        throw response;
-      }
-      return picture.json();
-    });
+    if (!response.ok) {
+      throw response;
+    }
+    const result = await response.json();
+    this.incrementPage();
+
+    return result;
+  }
+
+  incrementPage() {
+    this.page += 1;
+  }
+
+  resetPage() {
+    this.page = 1;
   }
 
   get query() {
