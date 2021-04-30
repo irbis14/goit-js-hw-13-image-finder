@@ -1,1 +1,0 @@
-html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}div{outline:1px solid teal}ul{list-style:none;padding:0;margin:15px}img{display:block;height:400px}.search-form,.title{margin:15px}.gallery{display:grid;grid-template-columns:1fr 1fr 1fr;grid-column-gap:20px;grid-row-gap:20px}
