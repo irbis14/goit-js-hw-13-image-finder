@@ -45,7 +45,8 @@ ul {
   padding: 5px;
 }
 
-.input:hover {
+.input:hover,
+.input:focus {
   border-color: #f321c6;
 }
 
@@ -101,7 +102,8 @@ ul {
   background-color: #9521f3;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   color: #ffffff;
   background-color: #f321c6;
 }
